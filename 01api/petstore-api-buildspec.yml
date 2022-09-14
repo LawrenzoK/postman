@@ -3,10 +3,11 @@ phases:
   install:
     commands:
       - cd 01api
-      - aws cloudformation package --template-file petstore-api.yaml
-                                   --s3-bucket <REPLACE_ME_WITH_UNIQUE_BUCKET_NAME>
-                                   --s3-prefix api-code
-                                   --output-template-file petstore-api-output.yaml
+      - aws cloudformation package \
+          --template petstore-api.yaml \
+          --s3-bucket us-east-1-input-bucket \
+          --output-template-file petstore-api-output.yaml 
+
 artifacts:
   type: zip
   files:
