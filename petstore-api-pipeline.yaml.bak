@@ -190,7 +190,7 @@ Resources:
         Name:
           Fn::Sub: ${AWS::StackName}-petstore-api-stack-codebuild-project
       Environment:
-        Type: LINUX
+        Type: AMAZON_LINUX
         ComputeType: BUILD_GENERAL1_SMALL
         Image: aws/codebuild/nodejs:12
       Source:
