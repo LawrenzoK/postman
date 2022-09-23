@@ -225,8 +225,8 @@ Resources:
           Fn::Sub: ${AWS::StackName}-newman-project
       Environment:
         Type: LINUX_CONTAINER
-        ComputeType: BUILD_GENERAL1_SMALL
-        Image: aws/codebuild/amazonlinux2-x86_64-standard:3.0
+        ComputeType: BUILD_GENERAL1_SMALL 
+        Image: aws/codebuild/amazonlinux2-x86_64-standard:2.0-19.11.26
         EnvironmentVariables:
           - Name: S3_BUCKET
             Type: PLAINTEXT
